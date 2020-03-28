@@ -1,0 +1,16 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+ENTITY and_gate IS
+    PORT (
+        a, b : IN STD_LOGIC;
+        y : OUT STD_LOGIC);
+END and_gate;
+
+ARCHITECTURE DataFlow OF and_gate IS
+
+BEGIN
+    y <= a AND b;
+
+END DataFlow;

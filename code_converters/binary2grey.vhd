@@ -1,0 +1,20 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY binary2gray IS
+    PORT (
+        B : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+        G : OUT STD_LOGIC_VECTOR (3 DOWNTO 0));
+END binary2gray;
+
+ARCHITECTURE DataFlow OF binary2gray IS
+
+BEGIN
+
+    G(3) <= B(3);
+    G(2) <= B(2) XOR B(3);
+    G(1) <= B(1) XOR B(2);
+    G(0) <= B(1) XOR B(0);
+END DataFlow;

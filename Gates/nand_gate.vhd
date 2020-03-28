@@ -1,0 +1,17 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+ENTITY nand_gate IS
+    PORT (
+        a, b : IN STD_LOGIC;
+        y : OUT STD_LOGIC);
+END nand_gate;
+
+ARCHITECTURE DataFlow OF nand_gate IS
+
+BEGIN
+
+    y <= a NAND b;
+
+END DataFlow;

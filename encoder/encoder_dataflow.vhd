@@ -1,0 +1,19 @@
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY encoder IS
+    PORT (
+        D : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+        S : OUT STD_LOGIC_VECTOR (2 DOWNTO 0));
+END encoder;
+
+ARCHITECTURE Behavioral OF encoder IS
+
+BEGIN
+    S(0) <= D(0) OR D(3) OR D(5) OR D(7);
+    S(1) <= D(2) OR D(3) OR D(6) OR D(7);
+    S(2) <= D(4) OR D(5) OR D(6) OR D(7);
+END Behavioral;
